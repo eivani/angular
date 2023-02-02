@@ -1,0 +1,186 @@
+{
+  "grid": [
+    {
+      "id": 1,
+      "Bank": "12",
+      "BankName": "ملت",
+      "Date1": "1400/03/31",
+      "Am1": 3213,
+      "Am2": 11111111111,
+      "Am3": 11.19,
+      "Am4": 23169640181,
+      "Am5": 43987,
+      "Dsc1": "سرمايه‌گذاري‌هاي استاني- عدالت(س.خ)ESC (مستقل)",
+      "Srt1": null,
+      "Srt2": null,
+      "Tags": null
+    },
+    {
+      "id": 2,
+      "Bank": "12",
+      "BankName": "ملت",
+      "Date1": "1400/03/31",
+      "Am1": 9831,
+      "Am2": 14000187509,
+      "Am3": -11.16,
+      "Am4": 23114768760,
+      "Am5": 43987,
+      "Dsc1": "دولت جمهوري اسلامي‌ايران (مستقل)",
+      "Srt1": null,
+      "Srt2": null,
+      "Tags": null
+    },
+    {
+      "id": 3,
+      "Bank": "13",
+      "BankName": "رفاه كارگران",
+      "Date1": "1400/03/31",
+      "Am1": 3740,
+      "Am2": 22222222222,
+      "Am3": 6.44,
+      "Am4": 13353035330,
+      "Am5": 43987,
+      "Dsc1": "صندوق تامين آتيه كاركنان بانك ملت (مستقل)",
+      "Srt1": null,
+      "Srt2": null,
+      "Tags": null
+    },
+    {
+      "id": 4,
+      "Bank": "12",
+      "BankName": "ملت",
+      "Date1": "1400/03/31",
+      "Am1": 3731,
+      "Am2": 14009108895,
+      "Am3": 5.67,
+      "Am4": 11748764647,
+      "Am5": 43987,
+      "Dsc1": "صندوق سرمايه‌گذاري واسطه‌گري مالي يكم (مستقل)",
+      "Srt1": null,
+      "Srt2": null,
+      "Tags": null
+    },
+    {
+      "id": 5,
+      "Bank": "15",
+      "BankName": "سپه",
+      "Date1": "1400/03/31",
+      "Am1": 1461,
+      "Am2": 14005659219,
+      "Am3": 5.01,
+      "Am4": 10381491014,
+      "Am5": 43987,
+      "Dsc1": "BFMصندوق سرمايه‌گذاري.ا.بازارگرداني ملت (مستقل)",
+      "Srt1": null,
+      "Srt2": null,
+      "Tags": null
+    },
+    {
+      "id": 6,
+      "Bank": "12",
+      "BankName": "ملت",
+      "Date1": "1400/03/31",
+      "Am1": 5172,
+      "Am2": 10101826594,
+      "Am3": 4.46,
+      "Am4": 9253327080,
+      "Am5": 43987,
+      "Dsc1": "شركت پتروشيمي فن آوران(سهامي عام) (مستقل)",
+      "Srt1": null,
+      "Srt2": null,
+      "Tags": null
+    },
+    {
+      "id": 7,
+      "Dsc1": "ccccccccc"
+    },
+    {
+      "id": 8,
+      "Dsc1": "cccccccccccccccccc"
+    }
+  ],
+  "pie": [
+    {
+      "Result": {
+        "DataSource": [
+          {
+            "Bank": "Prv",
+            "BankName": "بانکهای خصوصي",
+            "Date1": "1400/12/29",
+            "Item": null,
+            "Am2": 656843000000000,
+            "Srt1": null,
+            "Srt2": null,
+            "Tags": null
+          },
+          {
+            "Bank": "Com",
+            "BankName": "بانکهای تجاري دولتی",
+            "Date1": "1400/12/29",
+            "Item": null,
+            "Am2": 402062000000000,
+            "Srt1": null,
+            "Srt2": null,
+            "Tags": null
+          },
+          {
+            "Bank": "Spc",
+            "BankName": "بانکهای تخصصي دولتي",
+            "Date1": "1400/12/29",
+            "Item": null,
+            "Am2": 749409000000000,
+            "Srt1": null,
+            "Srt2": null,
+            "Tags": null
+          },
+          {
+            "Bank": "P44",
+            "BankName": "بانکهای خصوصی شده",
+            "Date1": "1400/12/29",
+            "Item": null,
+            "Am2": 731827000000000,
+            "Srt1": null,
+            "Srt2": null,
+            "Tags": null
+          }
+        ],
+        "Properties": {
+          "value": "Am2",
+          "valueName": "مبلغ تسهيلات غيرجاری",
+          "argument": "BankName",
+          "seriLabelType": "String",
+          "seriValueType": "Percent",
+          "extraTooltips": []
+        },
+        "Other_Properties": [
+          {
+            "Name": "Title",
+            "Value": "نمودار مبلغ مطالبات غیرجاری به تفکیک گروههای بانکی"
+          },
+          {
+            "Name": "SubTitle",
+            "Value": "مبالغ به میلیارد ریال"
+          },
+          {
+            "Name": "RLFilter",
+            "Value": ""
+          }
+        ]
+      },
+      "status": 1,
+      "List_Response": []
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "dddddddd",
+      "author": "typicode"
+    }
+  ]
+}
