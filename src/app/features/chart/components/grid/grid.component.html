@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card card-body">
+        <dx-data-grid #grid id="{{id}}" [dataSource]="dataSource" [allowColumnReordering]="true"
+          [allowColumnResizing]="true" [columnAutoWidth]="true" [showBorders]="true" [columns]="columns"
+          (onCellPrepared)="onCellPrepared($event)" (onCellClick)="onCellClick($event)"
+          (onSaving)="onSaving($event)"
+          >
+
+          <dxo-scrolling rowRenderingMode="virtual"> </dxo-scrolling>
+
+          <dxo-paging [pageSize]="rowsPerPage"> </dxo-paging>
+
+          <dxo-summary>
+            <ng-container *ngFor="let item of columns">
+              <dxi-total-item column="{{item['dataField']}}" summaryType="sum" displayFormat="Total count: {0}"
+                [customizeText]="customizeSumText">
+              </dxi-total-item>
+            </ng-container>
+          </dxo-summary>
+
+          <dxo-editing mode="row" [allowAdding]="true" [allowDeleting]="true" [allowUpdating]="true"
+            [(changes)]="changes" [(editRowKey)]="editRowKey"></dxo-editing>
+
+
+          <!-- <dxo-editing mode="popup" [allowAdding]="true" [allowUpdating]="true">
+            <dxo-form [colCount]="1"></dxo-form>
+            <dxo-popup>
+              <dxi-toolbar-item toolbar="bottom" location="after" widget="dxButton" [options]="{ type: 'success', text: 'Save', onClick: saveClickHandler }">
+              </dxi-toolbar-item>
+              <dxi-toolbar-item toolbar="bottom" location="after" widget="dxButton" [options]="{ type:'danger', text: 'Cancel', onClick: cancelClickHandler }">
+              </dxi-toolbar-item>
+            </dxo-popup>
+          </dxo-editing> -->
+
+          <dxo-export [enabled]="true" [allowExportSelectedData]="true"></dxo-export>
+
+        </dx-data-grid>
+
+      </div>
+    </div>
+  </div>
+</div>

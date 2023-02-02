@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="card card-body">
+                <dx-pie-chart id="pie" title="نمودار دایره " palette="bright" [dataSource]="dataSource">
+
+                    <dxi-series [argumentField]="seri.argumentField" [valueField]="seri.valueField">
+                        <dxo-label [visible]="true">
+                            <dxo-connector [visible]="true" [width]="1"></dxo-connector>
+                        </dxo-label>
+                    </dxi-series>
+
+                    <dxo-size [width]="500"></dxo-size>
+
+                    <dxo-export [enabled]="true"></dxo-export>
+
+                    <dxo-legend orientation="horizontal" horizontalAlignment="right"
+                     verticalAlignment="bottom">
+                    </dxo-legend>
+
+                    <dxo-tooltip [enabled]="true" format="millions" [customizeTooltip]="customizeTooltip">
+                    </dxo-tooltip>
+
+                </dx-pie-chart>
+            </div>
+        </div>
+    </div>
+</div>
