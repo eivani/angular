@@ -1,16 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ChartComponent } from './chart.component';
-import { BarChartComponent } from '../../shared/components/bar-chart/bar-chart.component';
-import { GridComponent } from '../../shared/components/grid/grid.component';
-import { PieChartComponent } from '../../shared/components/pie-chart/pie-chart.component';
+import { ReportComponent } from './components/report/report.component';
+
 
 const routes: Routes = [
   {
     path: '', component: ChartComponent, children: [
-      { path: 'pie', component: PieChartComponent },
-      { path: 'bar', component: BarChartComponent },
-      { path: 'grid', component: GridComponent },
+      { path: 'report', component: ReportComponent },
     ]
   }
 ];

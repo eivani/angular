@@ -10,13 +10,15 @@ import { DxPieChartModule } from 'devextreme-angular';
 import { GridComponent } from '../../shared/components/grid/grid.component';
 import { DxDataGridModule } from 'devextreme-angular';
 import { DxChartModule } from 'devextreme-angular';
+import { ReportComponent } from './components/report/report.component';
 
 @NgModule({
   declarations: [
     ChartComponent,
     PieChartComponent,
     BarChartComponent,
-    GridComponent
+    GridComponent,
+    ReportComponent
   ],
   imports: [
     CommonModule,

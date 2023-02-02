@@ -1,0 +1,20 @@
+<div class="conainer">
+    <div class="row">
+
+        <div class="col-12 mb-4">
+            <h1 class="mb-5">گزارشات :</h1>
+            <app-grid [dataSource]="dataSourceGrid" [columns]="columns" (onSaveData)="saveData($event)"
+                (customizeCell)="customizeCell($event)">
+            </app-grid>
+        </div>
+
+        <div class="col-12 mb-4">
+            <app-pie-chart [dataSource]="dataSourcePie" [seri]="series"></app-pie-chart>
+        </div>
+
+        <div class="col-12 mb-4">
+            <app-bar-chart></app-bar-chart>
+        </div>
+
+    </div>
+</div>

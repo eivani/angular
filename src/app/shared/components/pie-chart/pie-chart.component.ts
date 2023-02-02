@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-pie-chart',
@@ -8,24 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PieChartComponent implements OnInit {
 
-  dataSource: {}[] = [];
-  seri: { argumentField: string, valueField: string } = { argumentField: "BankName", valueField: "Am2" }
+  @Input() dataSource: {}[] = [];
+  @Input() seri!: { argumentField: string, valueField: string };
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.http.get('http://localhost:3004/pie').subscribe((item: any) => {
-      this.dataSource = item[0].Result.DataSource;
-
-    })
   }
 
   customizeTooltip(arg: any) {
+    let result = '';
+    result += '<div class="pb-3 mb-5 fw-bold h6">' + arg.argumentText + '</div>';
+    result += '<br> <br>';
+    result += '<div class="mb-5 fw-bold h6">' + arg.valueText + '</div>';
+    result += '<br> <br>';
+    result += '<div class="mb-5 fw-bold h6">' + arg.percent + '</div>';
     return {
-      text:`<div class='mb-3'>${arg.argumentText}<br>${arg.valueText} <br> ${arg.percent}</div>`,
-      color:'red'
-    };
+      text: result
+    }
   }
-
 
 }
