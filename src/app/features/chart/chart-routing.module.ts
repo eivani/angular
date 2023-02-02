@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ChartComponent } from './chart.component';
-import { BarChartComponent } from './components/bar-chart/bar-chart.component';
-import { GridComponent } from './components/grid/grid.component';
-import { PieChartComponent } from './components/pie-chart/pie-chart.component';
+import { BarChartComponent } from '../../shared/components/bar-chart/bar-chart.component';
+import { GridComponent } from '../../shared/components/grid/grid.component';
+import { PieChartComponent } from '../../shared/components/pie-chart/pie-chart.component';
 
 const routes: Routes = [
   {

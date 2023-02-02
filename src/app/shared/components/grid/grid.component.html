@@ -23,17 +23,6 @@
           <dxo-editing mode="row" [allowAdding]="true" [allowDeleting]="true" [allowUpdating]="true"
             [(changes)]="changes" [(editRowKey)]="editRowKey"></dxo-editing>
 
-
-          <!-- <dxo-editing mode="popup" [allowAdding]="true" [allowUpdating]="true">
-            <dxo-form [colCount]="1"></dxo-form>
-            <dxo-popup>
-              <dxi-toolbar-item toolbar="bottom" location="after" widget="dxButton" [options]="{ type: 'success', text: 'Save', onClick: saveClickHandler }">
-              </dxi-toolbar-item>
-              <dxi-toolbar-item toolbar="bottom" location="after" widget="dxButton" [options]="{ type:'danger', text: 'Cancel', onClick: cancelClickHandler }">
-              </dxi-toolbar-item>
-            </dxo-popup>
-          </dxo-editing> -->
-
           <dxo-export [enabled]="true" [allowExportSelectedData]="true"></dxo-export>
 
         </dx-data-grid>
