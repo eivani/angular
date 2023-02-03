@@ -3,8 +3,15 @@
         <div class="col-12">
             <div class="card card-body">
                 <dx-chart id="chart" [dataSource]="dataSource">
-                    <dxi-series argumentField="day" valueField="oranges" name="My oranges" type="bar" color="#ffaa66">
-                    </dxi-series>
+
+                    <ng-container *ngFor="let item of series">
+                        <dxi-series [valueField]="item.Field" [name]="item.FieldName" type="bar">
+                        </dxi-series>
+                    </ng-container>
+
+                    <dxo-common-series-settings [argumentField]="argumentField.name" type="bar">
+                    </dxo-common-series-settings>
+
                 </dx-chart>
             </div>
         </div>

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,34 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BarChartComponent implements OnInit {
 
-  dataSource = [
-    {
-      day: 'Monday',
-      oranges: 3,
-    }, {
-      day: 'Tuesday',
-      oranges: 2,
-    }, {
-      day: 'Wednesday',
-      oranges: 3,
-    }, {
-      day: 'Thursday',
-      oranges: 4,
-    }, {
-      day: 'Friday',
-      oranges: 6,
-    }, {
-      day: 'Saturday',
-      oranges: 11,
-    }, {
-      day: 'Sunday',
-      oranges: 4,
-    }];
+  dataSource = [];
+  
 
+  series: { Field: string, FieldName: string }[] = []
+  argumentField!: { value: string, name: string }
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.http.get('http://localhost:3004/bar').subscribe((item: any) => {
+      this.dataSource = item[0].DataSource; console.log(item[0].DataSource);
+      
+      this.series = item[0].Properties.series;
+      this.argumentField= item[0].Properties.argument
+    });
   }
+
 
 }

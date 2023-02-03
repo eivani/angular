@@ -171,6 +171,93 @@
       "List_Response": []
     }
   ],
+  "bar": [
+    {
+      "DataSource": [
+        {
+          "id": 1,
+          "Am1": 12344.44,
+          "Am11": 7582.24,
+          "Am4": 750.10,
+          "Am8": 17.21,
+          "Am9": 76742.3,
+          "Bank": "11",
+          "BankName": "صنعت و معدن",
+          "Date1": "1400/12/29",
+          "ExceptionItems": null,
+          "Srt1": null,
+          "Srt2": null,
+          "Tags": null
+        }
+ 
+      ],
+      "Properties": {
+        "series": [
+          {
+            "Field": "Am9",
+            "FieldName": "مانده تسهیلات و تعهدات",
+            "FieldType": "Currency9",
+            "SerieType": "",
+            "Postfix": "درصد",
+            "Prefix": "تست",
+            "Color": ""
+          },
+          {
+            "Field": "Am1",
+            "FieldName": "اصل تسهيلات پرداختي",
+            "FieldType": "Currency9",
+            "SerieType": "",
+            "Postfix": "",
+            "Prefix": "",
+            "Color": ""
+          }
+        ],
+        "exceptionItems": [],
+        "extraSeries": [
+          {
+            "Field": "Am8",
+            "FieldName": "خالص تعهدات با اعمال ضريب تبديل",
+            "FieldType": "",
+            "Postfix": "%",
+            "Prefix": "",
+            "SerieType": ""
+          }
+        ],
+        "argument": {
+          "value": "Bank",
+          "name": "BankName",
+          "type": "String",
+          "exceptionField": null
+        },
+        "extraTooltips": [],
+        "axisLabelType": "Currency9",
+        "axisLabelCaption": "",
+        "seriesState": ""
+      },
+      "Other_Properties": [
+        {
+          "Name": "Title",
+          "Value": "نمودار میله ای دو محوره (2)"
+        },
+        {
+          "Name": "SubTitle",
+          "Value": ""
+        },
+        {
+          "Name": "RLFilter",
+          "Value": "Bank"
+        },
+        {
+          "Name": "ExtraTitle",
+          "Value": "بانک ملت"
+        },
+        {
+          "Name": "ExtraTitle",
+          "Value": "تاریخ 1400/12/29"
+        }
+      ]
+    }
+  ],
   "posts": [
     {
       "id": 1,
