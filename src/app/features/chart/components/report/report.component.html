@@ -1,6 +1,9 @@
 <div class="conainer">
     <div class="row">
 
+        <app-date-picker></app-date-picker>
+
+
         <div class="col-12 mb-4">
             <h1 class="mb-5">گزارشات :</h1>
             <app-grid [dataSource]="dataSourceGrid" [columns]="columns" (onSaveData)="saveData($event)"

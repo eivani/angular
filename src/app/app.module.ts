@@ -9,6 +9,9 @@ import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptor } from './core/interceptors/auth.interceptor';
 import { HomeComponent } from './features/home/home.component';
 
+import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from "@angular/material/core";
+import { MaterialPersianDateAdapter, PERSIAN_DATE_FORMATS } from "../../src/app/shared/services/date-picker.service";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +28,8 @@ import { HomeComponent } from './features/home/home.component';
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    { provide: DateAdapter, useClass: MaterialPersianDateAdapter, deps: [MAT_DATE_LOCALE] },
+    { provide: MAT_DATE_FORMATS, useValue: PERSIAN_DATE_FORMATS }
   ],
   bootstrap: [AppComponent]
 })

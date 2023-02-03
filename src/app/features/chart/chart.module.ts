@@ -6,11 +6,10 @@ import { ChartComponent } from './chart.component';
 import { PieChartComponent } from '../../shared/components/pie-chart/pie-chart.component';
 import { BarChartComponent } from '../../shared/components/bar-chart/bar-chart.component';
 
-import { DxPieChartModule } from 'devextreme-angular';
+
 import { GridComponent } from '../../shared/components/grid/grid.component';
-import { DxDataGridModule } from 'devextreme-angular';
-import { DxChartModule } from 'devextreme-angular';
 import { ReportComponent } from './components/report/report.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -23,9 +22,7 @@ import { ReportComponent } from './components/report/report.component';
   imports: [
     CommonModule,
     ChartRoutingModule,
-    DxPieChartModule,
-    DxDataGridModule,
-    DxChartModule
+    SharedModule
   ]
 })
 export class ChartModule { }
