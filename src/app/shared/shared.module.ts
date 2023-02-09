@@ -23,12 +23,14 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { DxPieChartModule } from 'devextreme-angular';
 import { DxDataGridModule } from 'devextreme-angular';
 import { DxChartModule } from 'devextreme-angular';
+import { MaterialGridComponent } from './components/material-grid/material-grid.component';
 
 
 @NgModule({
   declarations: [
     AdminGridComponent,
-    DatePickerComponent
+    DatePickerComponent,
+    MaterialGridComponent
   ],
   imports: [
     CommonModule,

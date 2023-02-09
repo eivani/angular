@@ -1,0 +1,37 @@
+<div style="height: calc(100vh - 40px);">
+
+    <!-- <mat-form-field>
+        <mat-label>Filter by Username</mat-label>
+        <input matInput type="text" [(ngModel)]="filterValue"
+        (input)="findByName(filterValue)" placeholder="Search Username">
+    </mat-form-field>
+     -->
+    <div >
+        <mat-table [dataSource]="companiesList">
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    
+            <ng-container matColumnDef="CompanyID">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>CompanyID</mat-header-cell>
+                <mat-cell *matCellDef="let row">{{row.CompanyID}}</mat-cell>
+            </ng-container>
+    
+
+            <ng-container matColumnDef="CompanyName">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Role</mat-header-cell>
+                <mat-cell *matCellDef="let row">{{row.CompanyName}}</mat-cell>
+            </ng-container>
+
+        </mat-table>
+        
+        <mat-paginator 
+            [length]="companiesCount" 
+            [pageSize]="PSFparam.PageSize" 
+            [pageSizeOptions]="[5,10,25,100]"
+            (page)="onPaginateChange($event)"
+            showFirstLastButtons>
+        </mat-paginator>
+    </div>
+
+
+</div>
