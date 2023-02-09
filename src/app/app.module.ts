@@ -11,6 +11,7 @@ import { HomeComponent } from './features/home/home.component';
 
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from "@angular/material/core";
 import { MaterialPersianDateAdapter, PERSIAN_DATE_FORMATS } from "../../src/app/shared/services/date-picker.service";
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { MaterialPersianDateAdapter, PERSIAN_DATE_FORMATS } from "../../src/app/
     AppRoutingModule,
     HttpClientModule,
     SharedModule,
-
+    CoreModule 
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },

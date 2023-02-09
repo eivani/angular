@@ -1,0 +1,79 @@
+.main-header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.actions-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 200px;
+}
+
+.alert-box,
+.message-box,
+.language-box {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d0d0d0;
+    border-radius: 50%;
+    color: #434343;
+    overflow: hidden;
+}
+
+.nav-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-box {
+    margin-left: 1.5rem;
+}
+
+.profile-img {
+    width: 40px;
+    border: 2px solid #eee;
+    border-radius: 50%;
+}
+
+.profile-user-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.profile-action {
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #eee;
+    cursor: pointer;
+}
+
+
+.user-name {
+    padding: 0 0.5rem;
+}
+
+.branch-name {
+    font-size: 10px;
+}
+
+.dropdown-menu-info {
+    width: 13rem;
+    margin-top: 5px !important;
+    transform: translate(10px, 50px) !important;
+}

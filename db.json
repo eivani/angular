@@ -189,7 +189,6 @@
           "Srt2": null,
           "Tags": null
         }
- 
       ],
       "Properties": {
         "series": [
@@ -268,6 +267,403 @@
       "id": 2,
       "title": "dddddddd",
       "author": "typicode"
+    }
+  ],
+  "getMenu": [
+    {
+      "listMenu": [
+        {
+          "systemId": "06",
+          "parentId": null,
+          "dsc": "عنوان یک",
+          "title": "stk-system",
+          "subTree": {
+            "child": [
+              {
+                "systemId": "0601",
+                "parentId": "06",
+                "dsc": "یک",
+                "title": "tsmiBasicInformation",
+                "subTree": {
+                  "child": [
+                    {
+                      "systemId": "060101",
+                      "parentId": "0601",
+                      "dsc": "یک یک",
+                      "title": "tsmiLoc",
+                      "subTree": null
+                    },
+                    {
+                      "systemId": "060102",
+                      "parentId": "0601",
+                      "dsc": "یک دو",
+                      "title": "tsmiWh",
+                      "subTree": null
+                    },
+                    {
+                      "systemId": "060103",
+                      "parentId": "0601",
+                      "dsc": " یک سه",
+                      "title": "tsmiYear",
+                      "subTree": null
+                    },
+                    {
+                      "systemId": "060104",
+                      "parentId": "0601",
+                      "dsc": "یک چهار",
+                      "title": "tsmiType",
+                      "subTree": null
+                    }
+                  ]
+                }
+              },
+              {
+                "systemId": "0602",
+                "parentId": "06",
+                "dsc": "دو",
+                "title": "tsmiAction",
+                "subTree": {
+                  "child": [
+                    {
+                      "systemId": "060201",
+                      "parentId": "0602",
+                      "dsc": "دو یک",
+                      "title": "tsmiRsd",
+                      "subTree": null
+                    },
+                    {
+                      "systemId": "060202",
+                      "parentId": "0602",
+                      "dsc": "دو  دو",
+                      "title": "tsmiHvl",
+                      "subTree": null
+                    },
+                    {
+                      "systemId": "060203",
+                      "parentId": "0602",
+                      "dsc": "دو سه",
+                      "title": "tsmiRsdGroupFinalize",
+                      "subTree": null
+                    },
+                    {
+                      "systemId": "060204",
+                      "parentId": "0602",
+                      "dsc": "دو چهار",
+                      "title": "tsmiHvlGroupFinalize",
+                      "subTree": null
+                    }
+                  ]
+                }
+              },
+              {
+                "systemId": "0603",
+                "parentId": "06",
+                "dsc": "سه",
+                "title": "tsmiStockChecking",
+                "subTree": {
+                  "child": [
+                    {
+                      "systemId": "060301",
+                      "parentId": "0603",
+                      "dsc": "سه1",
+                      "title": "tsmiHistory",
+                      "subTree": null
+                    },
+                    {
+                      "systemId": "060302",
+                      "parentId": "0603",
+                      "dsc": "سه دو",
+                      "title": "tsmiStockCheckingForm",
+                      "subTree": null
+                    },
+                    {
+                      "systemId": "060303",
+                      "parentId": "0603",
+                      "dsc": "سه 3",
+                      "title": "tsmiDataEntry",
+                      "subTree": null
+                    },
+                    {
+                      "systemId": "060304",
+                      "parentId": "0603",
+                      "dsc": " سه4",
+                      "title": "tsmiTag",
+                      "subTree": null
+                    }
+                  ]
+                }
+              },
+              {
+                "systemId": "0604",
+                "parentId": "06",
+                "dsc": "چهار",
+                "title": "tsmiRailsStock",
+                "subTree": {
+                  "child": [
+                    {
+                      "systemId": "060401",
+                      "parentId": "0604",
+                      "dsc": "چهار1",
+                      "title": "tsmiManualPricing",
+                      "subTree": null
+                    },
+                    {
+                      "systemId": "060402",
+                      "parentId": "0604",
+                      "dsc": "چهار2",
+                      "title": "tsmiAutomaticPricing",
+                      "subTree": null
+                    },
+                    {
+                      "systemId": "060403",
+                      "parentId": "0604",
+                      "dsc": " چهار سه ",
+                      "title": "tsmiMoeenTemplates",
+                      "subTree": null
+                    }
+                  ]
+                }
+              },
+              {
+                "systemId": "0605",
+                "parentId": "06",
+                "dsc": "پنج",
+                "title": "tsmiReports",
+                "subTree": {
+                  "child": [
+                    {
+                      "systemId": "060501",
+                      "parentId": "0605",
+                      "dsc": "1 پنج",
+                      "title": "tsmiReportsForm",
+                      "subTree": null
+                    },
+                    {
+                      "systemId": "060502",
+                      "parentId": "0605",
+                      "dsc": " پنج2",
+                      "title": "tsmiStagnantItems",
+                      "subTree": null
+                    },
+                    {
+                      "systemId": "060504",
+                      "parentId": "0605",
+                      "dsc": "پنج3",
+                      "title": "tsmiBuyHistory",
+                      "subTree": null
+                    }
+                  ]
+                }
+              },
+              {
+                "systemId": "0607",
+                "parentId": "06",
+                "dsc": " شش",
+                "title": "tsmiItemNeed",
+                "subTree": {
+                  "child": [
+                    {
+                      "systemId": "060701",
+                      "parentId": "0607",
+                      "dsc": "شش1",
+                      "title": "tsmiNeed",
+                      "subTree": null
+                    },
+                    {
+                      "systemId": "060702",
+                      "parentId": "0607",
+                      "dsc": " شش2",
+                      "title": "tsmiNeedControl",
+                      "subTree": null
+                    },
+                    {
+                      "systemId": "060703",
+                      "parentId": "0607",
+                      "dsc": " شش3",
+                      "title": "tsmiNeedConfirm",
+                      "subTree": null
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "systemId": "17",
+          "parentId": null,
+          "dsc": "عنوان دو",
+          "title": "crm-system",
+          "subTree": {
+            "child": [
+              {
+                "systemId": "1701",
+                "parentId": "17",
+                "dsc": " 1عنوان دو"  ,
+                "title": "tsmiBasicInformation",
+                "subTree": {
+                  "child": [
+                    {
+                      "systemId": "170101",
+                      "parentId": "1701",
+                      "dsc": " 2عنوان دو ",
+                      "title": "tsmiBasicTables",
+                      "subTree": {
+                        "child": [
+                          {
+                            "systemId": "17010101",
+                            "parentId": "170101",
+                            "dsc": " 3عنوان دو ",
+                            "title": "tsmiProduct",
+                            "subTree": null
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "systemId": "170102",
+                      "parentId": "1701",
+                      "dsc":  " 3عنوان دو ",
+                      "title": "tsmiCompany",
+                      "subTree": null
+                    }
+                  ]
+                }
+              },
+              {
+                "systemId": "1702",
+                "parentId": "17",
+                "dsc": "عنوان سه ",
+                "title": "tsmiAction",
+                "subTree": {
+                  "child": [
+                    {
+                      "systemId": "170201",
+                      "parentId": "1702",
+                      "dsc": "عنوان",
+                      "title": "tsmiNegotiation",
+                      "subTree": null
+                    },
+                    {
+                      "systemId": "170202",
+                      "parentId": "1702",
+                      "dsc": "عنوان",
+                      "title": "tsmiPursue",
+                      "subTree": null
+                    }
+                  ]
+                }
+              },
+              {
+                "systemId": "1703",
+                "parentId": "17",
+                "dsc": "عنوان جهار",
+                "title": "tsmiReports",
+                "subTree": {
+                  "child": [
+                    {
+                      "systemId": "170301",
+                      "parentId": "1703",
+                      "dsc": "عنوان",
+                      "title": "tsmiReportsForm",
+                      "subTree": null
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "systemId": "18",
+          "parentId": null,
+          "dsc": "عنوان سه",
+          "title": "aut-system",
+          "subTree": {
+            "child": [
+              {
+                "systemId": "1801",
+                "parentId": "18",
+                "dsc": " عنوان سه یک",
+                "title": "tsmiBasicInformation",
+                "subTree": {
+                  "child": [
+                    {
+                      "systemId": "180101",
+                      "parentId": "1801",
+                      "dsc": " عنوان سه دو",
+                      "title": "0",
+                      "subTree": null
+                    },
+                    {
+                      "systemId": "180102",
+                      "parentId": "1801",
+                      "dsc": "عنوان سه سه ",
+                      "title": "0",
+                      "subTree": null
+                    },
+                    {
+                      "systemId": "180103",
+                      "parentId": "1801",
+                      "dsc": "عنوان سه چهار",
+                      "title": "0",
+                      "subTree": null
+                    }
+                  ]
+                }
+              },
+              {
+                "systemId": "1802",
+                "parentId": "18",
+                "dsc": "عنوان",
+                "title": "0",
+                "subTree": {
+                  "child": [
+                    {
+                      "systemId": "180201",
+                      "parentId": "1802",
+                      "dsc": "عنوان",
+                      "title": "0",
+                      "subTree": {
+                        "child": [
+                          {
+                            "systemId": "18020101",
+                            "parentId": "180201",
+                            "dsc": "عنوان1",
+                            "title": "0",
+                            "subTree": null
+                          },
+                          {
+                            "systemId": "18020102",
+                            "parentId": "180201",
+                            "dsc": " عنوان2",
+                            "title": "0",
+                            "subTree": null
+                          },
+                          {
+                            "systemId": "18020103",
+                            "parentId": "180201",
+                            "dsc": " عنوان3",
+                            "title": "0",
+                            "subTree": null
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "systemId": "1803",
+                "parentId": "18",
+                "dsc": "عنوان",
+                "title": "0",
+                "subTree": null
+              }
+            ]
+          }
+        }
+      ]
     }
   ]
 }

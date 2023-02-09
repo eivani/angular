@@ -1,0 +1,182 @@
+<!-- <app-svg-icons></app-svg-icons> -->
+<div #sideBarMenuRef (click)="preventNotAllowCloseSubMenu()" class="sidebar-content-menu shadow-lg contentHeight"
+    [ngClass]="{menuHideInCollapsed: menuCollapse}">
+
+    <!-------------------- sidBar ----------------------------------->
+    <div class="d-flex flex-column justify-content-between contentHeight" (mouseenter)="menuShowHover()"
+        (mouseleave)="menuCollapseHover()">
+        <div class="profile-box">
+            <img src="https://i.imgur.com/hczKIze.jpg" alt="Profile Image" />
+            <p>
+              
+            </p>
+        </div>
+
+        <div class="menu-content">
+            <ul class="list-unstyled p-0" id="accordionExample">
+                <li *ngFor="let item of menuItems; let i=index" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact: true}" [ngClass]="{'border-bottom': i < menuItems.length-1 }"
+                    class="menu-item">
+
+                    <a class="collapsed menuItem" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapseOne'+i"
+                        aria-expanded="true" [attr.aria-controls]="'collapseOne'+i">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                class="bi bi-bookmark pe-1" viewBox="0 0 16 16">
+                                <path
+                                    d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z" />
+                            </svg>
+                            <span class="navName">
+                                {{item.dsc}}
+                            </span>
+                        </span>
+                        <span class="link-arrow menu-item-link-arrow"
+                            *ngIf="item.subTree && item.subTree.child && item.subTree.child.length > 0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-left arrowLeft" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                            </svg>
+                        </span>
+                    </a>
+
+                    <div [id]="'collapseOne'+i" class="accordion-collapse collapse subMenu" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+
+                        <!-- three two sub menu  -->
+                        <ul *ngIf="item.subTree && item.subTree.child && item.subTree.child.length > 0"
+                            [id]="'accordionExample1'+i" class="hasSubMenu ps-2 list-unstyled">
+                            <li *ngFor="let subMenuOne of item.subTree.child; let j=index" routerLinkActive="active"
+                                [ngClass]="{'border-bottom': j < item.subTree.child.length-1 }" class="menu-item">
+                                <a class="menu-link-one collapsed" data-bs-toggle="collapse"
+                                    [attr.data-bs-target]="'#collapseTwo'+i+j" aria-expanded="true"
+                                    [attr.aria-controls]="'collapseTwo'+i+j">
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            fill="currentColor" class="bi bi-bookmark pe-1" viewBox="0 0 16 16">
+                                            <path
+                                                d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z" />
+                                        </svg>
+                                        <span class="navName">
+                                            {{subMenuOne.dsc}}
+                                        </span>
+                                    </span>
+                                    <span class="link-arrow"
+                                        *ngIf="subMenuOne.subTree && subMenuOne.subTree.child && subMenuOne.subTree.child.length > 0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            class="bi bi-chevron-left arrowLeft" fill="currentColor"
+                                            viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                                        </svg>
+                                    </span>
+                                </a>
+
+                                <div [id]="'collapseTwo'+i+j" class="accordion-collapse collapse subMenu"
+                                    aria-labelledby="headingOne" [attr.data-bs-parent]="'#accordionExample1'+i">
+                                    <ul *ngIf="subMenuOne.subTree && subMenuOne.subTree.child && subMenuOne.subTree.child.length > 0"
+                                        [id]="'accordionExample2'+j" class="hasSubMenu ps-2 list-unstyled">
+
+                                        <!-- three level sub menu -->
+                                        <li *ngFor="let subMenuTwo of subMenuOne.subTree.child; let k=index"
+                                            routerLinkActive="active" class="menu-item border-bottom"
+                                            [ngClass]="{'border-bottom': k < subMenuOne.subTree.child.length-1 }">
+
+                                            <a class="menu-link-two collapsed"
+                                                *ngIf="subMenuTwo.subTree && subMenuTwo.subTree.child && subMenuTwo.subTree.child.length > 0"
+                                                data-bs-toggle="collapse" [attr.data-bs-target]="'#collapseThree'+i+j+k"
+                                                aria-expanded="true" [attr.aria-controls]="'collapseThree'+i+j+k">
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                        height="20" width="20" class="pe-1">
+                                                        <use attr.xlink:href="#{{subMenuTwo.title}}">
+                                                        </use>
+                                                    </svg>
+                                                    <span class="navName">
+                                                        {{subMenuTwo.dsc}}
+                                                    </span>
+                                                </span>
+                                                <span class="link-arrow">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-chevron-left arrowLeft"
+                                                        viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                                                    </svg>
+                                                </span>
+                                            </a>
+
+                                            <a class="menu-link-two" *ngIf="!subMenuTwo.subTree"
+                                                [routerLink]="[item.title + '/' +subMenuOne.title + '/'+ subMenuTwo.title]">
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                        height="20" width="20" class="pe-1">
+                                                        <use attr.xlink:href="#{{subMenuTwo.title}}">
+                                                        </use>
+                                                    </svg>
+                                                    <span class="navName">
+                                                        {{subMenuTwo.dsc}}
+                                                    </span>
+                                                </span>
+                                            </a>
+
+                                            <div [id]="'collapseThree'+i+j+k" class="accordion-collapse collapse subMenu"
+                                                aria-labelledby="headingOne"
+                                                [attr.data-bs-parent]="'#accordionExample2'+j">
+                                                <ul *ngIf="subMenuTwo.subTree && subMenuTwo.subTree.child && subMenuTwo.subTree.child.length > 0"
+                                                    class="hasSubMenu ps-2 list-unstyled">
+                                                    <li *ngFor="let subMenuThree of subMenuTwo.subTree.child; let n=index"
+                                                        routerLinkActive="active" class="menu-item border-bottom"
+                                                        [ngClass]="{'border-bottom': n < subMenuTwo.subTree.child.length-1 }">
+                                                        <a [routerLink]="[item.title + '/' +subMenuOne.title + '/'+ subMenuTwo.title +'/'+ subMenuThree.title]"
+                                                            class="menu-link-three">
+                                                            <span class="navName">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                    height="16" fill="currentColor"
+                                                                    class="bi bi-bar-chart-fill" viewBox="0 0 16 16">
+                                                                    <path
+                                                                        d="M1 11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3zm5-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2z" />
+                                                                </svg>
+                                                                {{ subMenuThree.dsc }}
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </li>
+                                        <!-- three level sub menu -->
+
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- three two sub menu  -->
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="p-2 border-top">
+            <a (click)="logout()" class="menuItem">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-box-arrow-left me-1" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z" />
+                    <path fill-rule="evenodd"
+                        d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z" />
+                </svg>
+
+                <span class="navName navLink text-decoration-none">
+                    خروج
+                </span>
+
+            </a>
+        </div>
+
+    </div>
+    <!-------------------- sidBar ----------------------------------->
+</div>
+

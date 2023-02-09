@@ -1,1 +1,13 @@
-<router-outlet></router-outlet>
+<header class="header">
+    <app-header></app-header>
+</header>
+
+<main [ngClass]="{'movable-main-content': !isMenuCollapse}" class="main">
+    <aside>
+        <app-side-bar (notAllowCloseSubMenuStatus)="closeSubMenuStatus($event)" [menuCollapse]="isMenuCollapse"
+            [menuCollapseStatus]="menuCollapseStatus"></app-side-bar>
+    </aside>
+    <section class="main-content">
+        <router-outlet></router-outlet>
+    </section>
+</main>
