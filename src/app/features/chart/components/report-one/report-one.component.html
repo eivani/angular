@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        
+        <h1 class="mb-4">گزارش:</h1>
+
+        <div class="d-flex mb-3">
+            <button type="button" class="btn btn-success">افزودن</button>
+            <button type="button" class="btn btn-danger mx-2">حذف</button>
+            <button type="button" class="btn btn-primary">بروزرسانی</button>
+        </div>
+
+        <div class="col-12">
+            <app-admin-grid [columnDefs]="columns" [rowData]="rows"></app-admin-grid>
+        </div>
+
+    </div>
+</div>
