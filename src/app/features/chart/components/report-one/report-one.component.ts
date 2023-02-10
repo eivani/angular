@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { log } from 'console';
 import { AdminGridComponent } from 'src/app/shared/components/admin-grid/admin-grid.component';
 import { IGridColumn } from 'src/app/shared/models/ag-grid.model';
 import { ModalService } from '../../../../shared/services/modal.service'
