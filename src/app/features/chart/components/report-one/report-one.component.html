@@ -1,17 +1,74 @@
 <div class="container">
     <div class="row">
-        
+
         <h1 class="mb-4">گزارش:</h1>
 
         <div class="d-flex mb-3">
-            <button type="button" class="btn btn-success">افزودن</button>
-            <button type="button" class="btn btn-danger mx-2">حذف</button>
-            <button type="button" class="btn btn-primary">بروزرسانی</button>
+
+            <button type="button" class="btn btn-success" (click)="openModal('add')">
+                افزودن
+            </button>
+
+            <button type="button" class="btn btn-danger mx-2" (click)="deleteReport()">
+                حذف
+            </button>
+
+            <button type="button" class="btn btn-primary" (click)="openModal('update')">
+                بروزرسانی
+            </button>
+
         </div>
 
         <div class="col-12">
-            <app-admin-grid [columnDefs]="columns" [rowData]="rows"></app-admin-grid>
+            <app-admin-grid #gridData [columnDefs]="columns" [rowData]="rows" (rowSelected)="onSelected($event)"></app-admin-grid>
         </div>
 
     </div>
 </div>
+
+
+<ng-template #modalData let-modal>
+    <div class="modal-header card-header p-4">
+
+        <button type="button" class="btn-close position-absolute start-0 m-2" style="z-index: 9000;"
+            (click)="closeModal()">
+        </button>
+    </div>
+
+    <div class="modal-body companyTabs">
+        <form [formGroup]="reportForm">
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-6">
+                        <mat-form-field appearance="outline" class="mb-3 w-100">
+                            <mat-label>
+                                نام بانک
+                            </mat-label>
+                            <input matInput formControlName="BankName" type="text" id="BankName" class="ltr-input">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-6">
+                        <mat-form-field appearance="outline" class="mb-3 w-100">
+                            <mat-label>
+                                توضیحات
+                            </mat-label>
+                            <input matInput formControlName="Am4" type="text" id="Am4" class="ltr-input">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-12">
+                        <button type="button" class="btn btn-primary px-4" (click)="onSubmit()">
+                            ذخیره
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</ng-template>
