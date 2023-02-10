@@ -32,6 +32,7 @@ export class ReportOneComponent implements OnInit {
     this.oninitForm()
   }
 
+  //get data
   getData() {
     this.http.get('http://localhost:3004/report-one-columns').subscribe((item: any) => {
       this.columns = item[0].columns;
@@ -42,6 +43,7 @@ export class ReportOneComponent implements OnInit {
     })
   }
 
+  //intialize form to report form
   oninitForm() {
     this.reportForm = new FormGroup({
       BankName: new FormControl(''),
@@ -49,6 +51,7 @@ export class ReportOneComponent implements OnInit {
     })
   }
 
+  //open modal to update and add button
   openModal(typeModal: string = 'add' || 'update') {
     this.modalService.open(this.modalData);
     if (typeModal === 'update') {
@@ -61,10 +64,11 @@ export class ReportOneComponent implements OnInit {
     }
   }
 
+  //submit data for update and add
   onSubmit() {
     if (!this.flage) {
       let prm = { id: Math.random(), BankName: this.reportForm.controls['BankName'].value, Am4: this.reportForm.controls['Am4'].value };
-      
+
       this.http.post('http://localhost:3004/report-one-rows', prm).subscribe((item: any) => {
         this.rows.push(item);
         this.gridData.agGrid.api.setRowData(this.rows);
@@ -87,6 +91,7 @@ export class ReportOneComponent implements OnInit {
     this.Data = event.data
   }
 
+  // deleted selected data from row 
   deleteReport() {
     this.http.delete('http://localhost:3004/report-one-rows/' + this.id).subscribe((item: any) => {
       this.rows = this.rows.filter((item: any) => item.id !== this.id)
@@ -94,6 +99,7 @@ export class ReportOneComponent implements OnInit {
     this.gridData.agGrid.api.setRowData(this.rows)
   }
 
+  //close modal
   closeModal() {
     this.modalService.close();
   }
