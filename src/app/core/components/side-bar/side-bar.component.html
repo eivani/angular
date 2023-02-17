@@ -8,7 +8,7 @@
         <div class="profile-box">
             <img src="https://i.imgur.com/hczKIze.jpg" alt="Profile Image" />
             <p>
-              
+
             </p>
         </div>
 
@@ -42,13 +42,13 @@
 
                     <div [id]="'collapseOne'+i" class="accordion-collapse collapse subMenu" aria-labelledby="headingOne"
                         data-bs-parent="#accordionExample">
-
                         <!-- three two sub menu  -->
                         <ul *ngIf="item.subTree && item.subTree.child && item.subTree.child.length > 0"
                             [id]="'accordionExample1'+i" class="hasSubMenu ps-2 list-unstyled">
                             <li *ngFor="let subMenuOne of item.subTree.child; let j=index" routerLinkActive="active"
                                 [ngClass]="{'border-bottom': j < item.subTree.child.length-1 }" class="menu-item">
-                                <a class="menu-link-one collapsed" data-bs-toggle="collapse"
+                                <a  [routerLink]="['/home/'+item.title + '/' +subMenuOne.title]"  class="menu-link-one collapsed" data-bs-toggle="collapse"
+                                
                                     [attr.data-bs-target]="'#collapseTwo'+i+j" aria-expanded="true"
                                     [attr.aria-controls]="'collapseTwo'+i+j">
                                     <span>
@@ -106,8 +106,7 @@
                                                 </span>
                                             </a>
 
-                                            <a class="menu-link-two" *ngIf="!subMenuTwo.subTree"
-                                                [routerLink]="[item.title + '/' +subMenuOne.title + '/'+ subMenuTwo.title]">
+                                            <a class="menu-link-two" *ngIf="!subMenuTwo.subTree">
                                                 <span>
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                                         height="20" width="20" class="pe-1">
@@ -120,8 +119,8 @@
                                                 </span>
                                             </a>
 
-                                            <div [id]="'collapseThree'+i+j+k" class="accordion-collapse collapse subMenu"
-                                                aria-labelledby="headingOne"
+                                            <div [id]="'collapseThree'+i+j+k"
+                                                class="accordion-collapse collapse subMenu" aria-labelledby="headingOne"
                                                 [attr.data-bs-parent]="'#accordionExample2'+j">
                                                 <ul *ngIf="subMenuTwo.subTree && subMenuTwo.subTree.child && subMenuTwo.subTree.child.length > 0"
                                                     class="hasSubMenu ps-2 list-unstyled">
@@ -169,9 +168,9 @@
                         d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z" />
                 </svg>
 
-                <span class="navName navLink text-decoration-none">
+                <a class="navName navLink text-decoration-none">
                     خروج
-                </span>
+                </a>
 
             </a>
         </div>
@@ -179,4 +178,3 @@
     </div>
     <!-------------------- sidBar ----------------------------------->
 </div>
-

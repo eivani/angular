@@ -257,103 +257,29 @@
       ]
     }
   ],
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
-      "id": 2,
-      "title": "dddddddd",
-      "author": "typicode"
-    }
-  ],
   "getMenu": [
     {
       "listMenu": [
         {
           "systemId": "06",
           "parentId": null,
-          "dsc": "عنوان یک",
-          "title": "stk-system",
+          "dsc": "گزارشات",
+          "title": "rep",
           "subTree": {
             "child": [
               {
                 "systemId": "0601",
                 "parentId": "06",
-                "dsc": "یک",
-                "title": "tsmiBasicInformation",
-                "subTree": {
-                  "child": [
-                    {
-                      "systemId": "060101",
-                      "parentId": "0601",
-                      "dsc": "یک یک",
-                      "title": "tsmiLoc",
-                      "subTree": null
-                    },
-                    {
-                      "systemId": "060102",
-                      "parentId": "0601",
-                      "dsc": "یک دو",
-                      "title": "tsmiWh",
-                      "subTree": null
-                    },
-                    {
-                      "systemId": "060103",
-                      "parentId": "0601",
-                      "dsc": " یک سه",
-                      "title": "tsmiYear",
-                      "subTree": null
-                    },
-                    {
-                      "systemId": "060104",
-                      "parentId": "0601",
-                      "dsc": "یک چهار",
-                      "title": "tsmiType",
-                      "subTree": null
-                    }
-                  ]
-                }
+                "dsc": "گزارش یک",
+                "title": "rep1",
+                "subTree": null
               },
               {
                 "systemId": "0602",
                 "parentId": "06",
-                "dsc": "دو",
-                "title": "tsmiAction",
-                "subTree": {
-                  "child": [
-                    {
-                      "systemId": "060201",
-                      "parentId": "0602",
-                      "dsc": "دو یک",
-                      "title": "tsmiRsd",
-                      "subTree": null
-                    },
-                    {
-                      "systemId": "060202",
-                      "parentId": "0602",
-                      "dsc": "دو  دو",
-                      "title": "tsmiHvl",
-                      "subTree": null
-                    },
-                    {
-                      "systemId": "060203",
-                      "parentId": "0602",
-                      "dsc": "دو سه",
-                      "title": "tsmiRsdGroupFinalize",
-                      "subTree": null
-                    },
-                    {
-                      "systemId": "060204",
-                      "parentId": "0602",
-                      "dsc": "دو چهار",
-                      "title": "tsmiHvlGroupFinalize",
-                      "subTree": null
-                    }
-                  ]
-                }
+                "dsc": "گزارش دو",
+                "title": "rep2",
+                "subTree": null
               },
               {
                 "systemId": "0603",

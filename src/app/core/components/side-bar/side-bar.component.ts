@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { MenuModel } from '../../models/menu.model';
 import { ToggleMenuService } from '../../serviese/toggle-menu.service';
@@ -23,7 +23,7 @@ export class SideBarComponent implements OnInit {
   @ViewChild('sideBarMenuRef') sideBarMenuRef!: ElementRef;
 
   constructor(
-    private route: ActivatedRoute,
+    private route: Router,
     private toggleMenuService: ToggleMenuService,
     private http: HttpClient,
   ) { }

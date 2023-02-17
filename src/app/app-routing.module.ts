@@ -4,9 +4,10 @@ import { HomeComponent } from './features/home/home.component';
 
 
 const routes: Routes = [
+  { path: '', component: HomeComponent },
   {
     path: 'home', component: HomeComponent, children: [
-      { path: 'chart', loadChildren: () => import('./features/chart/chart.module').then(m => m.ChartModule) }
+      { path: 'rep', loadChildren: () => import('./features/chart/chart.module').then(m => m.ChartModule) }
     ]
   },
 ];
