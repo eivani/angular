@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+
+        <h1 class="mb-4">گزارش با فرم داینامیک:</h1>
+
+        <div class="d-flex mb-3">
+
+            <button type="button" class="btn btn-success" (click)="openModal('add')">
+                افزودن
+            </button>
+
+            <button type="button" class="btn btn-danger mx-2" (click)="deleteReport()">
+                حذف
+            </button>
+
+            <button type="button" class="btn btn-primary" (click)="openModal('update')">
+                بروزرسانی
+            </button>
+
+        </div>
+
+        <div class="col-12">
+            <app-admin-grid #gridData [columnDefs]="columns" [rowData]="rows" 
+                (rowSelected)="onSelected($event)" ></app-admin-grid>
+        </div>
+
+    </div>
+</div>
+<!------------------------------ modal update and delete -------------------------------->
+<ng-template #modalData let-modal>
+    <div class="modal-header card-header p-4">
+
+        <button type="button" class="btn-close position-absolute start-0 m-2" style="z-index: 9000;"
+            (click)="closeModal()">
+        </button>
+    </div>
+
+    <div class="modal-body companyTabs">
+        <app-dynamic-form [fields]="columns" [showSubmitButton]="true" [editRow]="editRowData"
+         (onSubmit)="getDataSubmit($event)"></app-dynamic-form>
+    </div>
+</ng-template>

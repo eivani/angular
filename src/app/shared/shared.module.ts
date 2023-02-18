@@ -5,6 +5,7 @@ import { SharedRoutingModule } from './shared-routing.module';
 import { AdminGridComponent } from './components/admin-grid/admin-grid.component';
 import { AgGridModule } from 'ag-grid-angular';
 import { DatePickerComponent } from './components/date-picker/date-picker.component';
+import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.component';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -26,11 +27,13 @@ import { DxChartModule } from 'devextreme-angular';
 import { MaterialGridComponent } from './components/material-grid/material-grid.component';
 
 
+
 @NgModule({
   declarations: [
     AdminGridComponent,
     DatePickerComponent,
-    MaterialGridComponent
+    MaterialGridComponent,
+    DynamicFormComponent
   ],
   imports: [
     CommonModule,
@@ -81,6 +84,7 @@ import { MaterialGridComponent } from './components/material-grid/material-grid.
     MatTooltipModule,
     MatTreeModule,
     MatCheckboxModule,
+    DynamicFormComponent
   ]
 })
 export class SharedModule { }

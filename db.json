@@ -264,7 +264,7 @@
           "systemId": "06",
           "parentId": null,
           "dsc": "گزارشات",
-          "title": "rep",
+          "title": "report",
           "subTree": {
             "child": [
               {
@@ -284,40 +284,9 @@
               {
                 "systemId": "0603",
                 "parentId": "06",
-                "dsc": "سه",
-                "title": "tsmiStockChecking",
-                "subTree": {
-                  "child": [
-                    {
-                      "systemId": "060301",
-                      "parentId": "0603",
-                      "dsc": "سه1",
-                      "title": "tsmiHistory",
-                      "subTree": null
-                    },
-                    {
-                      "systemId": "060302",
-                      "parentId": "0603",
-                      "dsc": "سه دو",
-                      "title": "tsmiStockCheckingForm",
-                      "subTree": null
-                    },
-                    {
-                      "systemId": "060303",
-                      "parentId": "0603",
-                      "dsc": "سه 3",
-                      "title": "tsmiDataEntry",
-                      "subTree": null
-                    },
-                    {
-                      "systemId": "060304",
-                      "parentId": "0603",
-                      "dsc": " سه4",
-                      "title": "tsmiTag",
-                      "subTree": null
-                    }
-                  ]
-                }
+                "dsc": "گزارش سه",
+                "title": "rep3",
+                "subTree": null
               },
               {
                 "systemId": "0604",
@@ -677,12 +646,70 @@
     {
       "id": 0.7725090846301845,
       "BankName": "test113",
-      "Am4": "10000"
+      "Am4": "100003"
     },
     {
       "id": 0.038927717057424704,
       "BankName": "test4",
       "Am4": "34444"
+    }
+  ],
+  "report-two-rows": [
+    {
+      "id": 1,
+      "IndustryID": 1,
+      "IndustryName": "غذایی"
+    },
+    {
+      "id": 2,
+      "IndustryID": 2,
+      "IndustryName": "دارویی"
+    },
+    {
+      "id": 3,
+      "IndustryID": 3,
+      "IndustryName": "بسته بندی"
+    },
+    {
+      "id": 4,
+      "IndustryID": 4,
+      "IndustryName": "نمایندگان و مراکز فروش"
+    },
+    {
+      "id": 5,
+      "IndustryID": 5,
+      "IndustryName": "تبلیغات"
+    },
+    {
+      "id": 6,
+      "IndustryID": 6,
+      "IndustryName": "تجهیزات آزمایشگاهی"
+    },
+    {
+      "IndustryID": "33",
+      "IndustryName": "dddzs",
+      "id": 0.42245930800586007
+    },
+    {
+      "IndustryID": "77",
+      "IndustryName": "test",
+      "id": 0.9978441374431921
+    }
+  ],
+  "report-two-columns": [
+    {
+      "columns": [
+        {
+          "field": "IndustryID",
+          "format": "number",
+          "headerName": "شماره"
+        },
+        {
+          "field": "IndustryName",
+          "format": "text",
+          "headerName": "نام محصول"
+        }
+      ]
     }
   ]
 }

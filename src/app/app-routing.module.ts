@@ -7,7 +7,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   {
     path: 'home', component: HomeComponent, children: [
-      { path: 'rep', loadChildren: () => import('./features/chart/chart.module').then(m => m.ChartModule) }
+      { path: 'report', loadChildren: () => import('./features/chart/chart.module').then(m => m.ChartModule) }
     ]
   },
 ];

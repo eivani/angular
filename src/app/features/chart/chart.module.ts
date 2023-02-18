@@ -11,6 +11,7 @@ import { GridComponent } from '../../shared/components/grid/grid.component';
 import { ReportComponent } from './components/report/report.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ReportOneComponent } from './components/report-one/report-one.component';
+import { ReportTwoComponent } from './components/report-two/report-two.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ReportOneComponent } from './components/report-one/report-one.component
     BarChartComponent,
     GridComponent,
     ReportComponent,
-    ReportOneComponent
+    ReportOneComponent,
+    ReportTwoComponent
   ],
   imports: [
     CommonModule,
